@@ -1,0 +1,44 @@
+{
+  "name": "agenciafmd/local-addresses",
+  "description": "Endereços",
+  "homepage": "https://github.com/agenciafmd/local-addresses",
+  "keywords": [
+    "laravel",
+    "agenciafmd"
+  ],
+  "authors": [
+    {
+      "name": "Tarsisio Xavier",
+      "email": "tarsisio@fmd.ag",
+      "homepage": "https://fmd.ag/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "laravel/framework": "5.8.*"
+  },
+  "autoload": {
+    "classmap": [
+      "src/database/seeds",
+      "src/database/factories"
+    ],
+    "files": [
+      "src/Http/helpers.php"
+    ],
+    "psr-4": {
+      "Agenciafmd\\Addresses\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Agenciafmd\\Addresses\\Providers\\AddressServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
