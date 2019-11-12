@@ -8,8 +8,6 @@ class AddressServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->providers();
-
         $this->loadViews();
 
         $this->loadMigrations();
@@ -23,11 +21,6 @@ class AddressServiceProvider extends ServiceProvider
         if ($this->app->environment('local') && $this->app->runningInConsole()) {
             $this->setLocalFactories();
         }
-    }
-
-    protected function providers()
-    {
-        $this->app->register(RouteServiceProvider::class);
     }
 
     protected function loadViews()
@@ -70,7 +63,7 @@ class AddressServiceProvider extends ServiceProvider
 
     protected function loadConfigs()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/local-addresses.php', 'local-addresses');
+        $this->mergeConfigFrom(__DIR__ . '/../config/admix-addresses.php', 'admix-addresses');
         $this->mergeConfigFrom(__DIR__ . '/../config/gate.php', 'gate');
         $this->mergeConfigFrom(__DIR__ . '/../config/audit-alias.php', 'audit-alias');
         $this->mergeConfigFrom(__DIR__ . '/../config/upload-configs.php', 'upload-configs');

@@ -2,7 +2,7 @@
 
 return [
     [
-        'name' => config('local-addresses.name'),
+        'name' => config('admix-addresses.name'),
         'policy' => '\Agenciafmd\Addresses\Policies\AddressPolicy',
         'abilities' => [
             [
