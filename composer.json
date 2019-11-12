@@ -1,7 +1,7 @@
 {
-  "name": "agenciafmd/local-addresses",
+  "name": "agenciafmd/admix-addresses",
   "description": "Endereços",
-  "homepage": "https://github.com/agenciafmd/local-addresses",
+  "homepage": "https://github.com/agenciafmd/admix-addresses",
   "keywords": [
     "laravel",
     "agenciafmd"

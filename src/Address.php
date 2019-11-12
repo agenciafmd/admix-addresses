@@ -3,7 +3,6 @@
 namespace Agenciafmd\Addresses;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 use OwenIt\Auditing\Auditable;
 use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 
