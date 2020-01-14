@@ -1,10 +1,16 @@
 {
   "name": "agenciafmd/admix-addresses",
   "description": "Endereços",
+  "version": "1.0.0",
   "homepage": "https://github.com/agenciafmd/admix-addresses",
   "keywords": [
     "laravel",
-    "agenciafmd"
+    "agenciafmd",
+    "php",
+    "endereço",
+    "mapa",
+    "brasil",
+    "coordenadas"
   ],
   "authors": [
     {
@@ -15,11 +21,13 @@
     }
   ],
   "require": {
-    "laravel/framework": "5.8.*"
+    "agenciafmd/admix-form": "dev-master"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0"
   },
   "autoload": {
     "classmap": [
-      "src/database/seeds",
       "src/database/factories"
     ],
     "files": [
