@@ -1,6 +1,7 @@
 {
   "name": "agenciafmd/admix-addresses",
   "description": "Endereços",
+  "version": "1.0.0",
   "homepage": "https://github.com/agenciafmd/admix-addresses",
   "keywords": [
     "laravel",
