@@ -95,25 +95,20 @@ public function attributes()
 
 ### Factories
 ```
-\Agenciafmd\Packages\Package::saving(function () {
-    $faker = Faker\Factory::create('pt_BR');
-    request()->merge([
-        'address' => [
-            'default' => [
-                'full_street' => $faker->streetAddress,
-                'zipcode' => $faker->postcode,
-                'street' => $faker->streetName,
-                'number' => $faker->buildingNumber,
-                'neighborhood' => $faker->citySuffix,
-                'complement' => $faker->citySuffix,
-                'city' => $faker->city,
-                'state' => $faker->state,
-                'latitude' => $faker->latitude($min = -20.8, $max = -20.9),
-                'longitude' => $faker->longitude($min = -49.4, $max = -50.3),
-            ]
-        ]
-    ]);
-});
+...
+$item->addAddress('default', [
+    'full_street' => $faker->streetAddress,
+    'zipcode' => $faker->postcode,
+    'street' => $faker->streetName,
+    'number' => $faker->buildingNumber,
+    'neighborhood' => $faker->citySuffix,
+    'complement' => $faker->citySuffix,
+    'city' => $faker->city,
+    'state' => $faker->state,
+    'latitude' => $faker->latitude($min = -20.8, $max = -20.9),
+    'longitude' => $faker->longitude($min = -49.4, $max = -50.3),
+]);
+...
 ```
 
 ## Uso

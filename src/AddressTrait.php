@@ -29,7 +29,7 @@ trait AddressTrait
         return $this->morphMany(Address::class, 'addressable');
     }
 
-    private function addAddress($collection, $address)
+    public function addAddress($collection, $address)
     {
         $this->addresses()
             ->updateOrCreate(['collection' => $collection], $address + ['collection' => $collection]);
