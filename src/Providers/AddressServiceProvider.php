@@ -2,6 +2,7 @@
 
 namespace Agenciafmd\Addresses\Providers;
 
+use Form;
 use Illuminate\Support\ServiceProvider;
 
 class AddressServiceProvider extends ServiceProvider
@@ -13,6 +14,8 @@ class AddressServiceProvider extends ServiceProvider
         $this->loadMigrations();
 
         $this->loadTranslations();
+
+        $this->loadComponents();
 
         $this->loadViewComposer();
 
@@ -36,6 +39,18 @@ class AddressServiceProvider extends ServiceProvider
     protected function loadTranslations()
     {
         $this->loadJsonTranslationsFrom(__DIR__ . '/../resources/lang');
+    }
+
+    protected function loadComponents()
+    {
+        Form::component('bsAddressText', 'agenciafmd/addresses::components.form.text', [
+            'label',
+            'collection',
+            'name',
+            'value' => null,
+            'attributes' => [],
+            'helper' => null,
+        ]);
     }
 
     protected function loadViewComposer()
