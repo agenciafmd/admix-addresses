@@ -68,6 +68,8 @@ public function rules()
         'address.*.complement' => 'nullable|max:150',
         'address.*.neighborhood' => 'required|max:150',
         'address.*.city' => 'required|max:150',
+        'address.*.state' => 'required|max:150',
+        'address.*.state_initials' => 'required|max:150',
         'address.*.latitude' => 'required|max:150',
         'address.*.longitude' => 'required|max:150',
         ...
@@ -86,6 +88,7 @@ public function attributes()
         'address.*.neighborhood' => 'bairro',
         'address.*.city' => 'cidade',
         'address.*.state' => 'estado',
+        'address.*.state_initials' => 'sigla do estado',
         'address.*.latitude' => 'latitude',
         'address.*.longitude' => 'longitude',
         ...
@@ -105,6 +108,7 @@ $item->addAddress('default', [
     'complement' => $faker->citySuffix,
     'city' => $faker->city,
     'state' => $faker->state,
+    'state_initials' => $faker->stateAbbrev,
     'latitude' => $faker->latitude($min = -20.8, $max = -20.9),
     'longitude' => $faker->longitude($min = -49.4, $max = -50.3),
 ]);
@@ -124,6 +128,7 @@ $model->address()->complement
 $model->address()->neighborhood
 $model->address()->city
 $model->address()->state
+$model->address()->state_initials
 $model->address()->latitude
 $model->address()->longitude
 ```
