@@ -10,7 +10,7 @@
 ## Instalação
 
 ```
-composer require mixdinternet/admix-addresses:dev-master
+composer require agenciafmd/admix-addresses:dev-master
 ```
 
 ## Configuração
