@@ -108,7 +108,7 @@ $item->addAddress('default', [
     'complement' => $faker->citySuffix,
     'city' => $faker->city,
     'state' => $faker->state,
-    'state_initials' => $faker->stateAbbrev,
+    'state_initials' => $faker->stateAbbr,
     'latitude' => $faker->latitude($min = -20.8, $max = -20.9),
     'longitude' => $faker->longitude($min = -49.4, $max = -50.3),
 ]);
