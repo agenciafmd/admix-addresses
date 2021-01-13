@@ -1,7 +1,6 @@
 {
   "name": "agenciafmd/admix-addresses",
   "description": "Endereços",
-  "version": "1.0.0",
   "homepage": "https://github.com/agenciafmd/admix-addresses",
   "keywords": [
     "laravel",
@@ -21,7 +20,7 @@
     }
   ],
   "require": {
-    "agenciafmd/admix-form": "dev-master"
+    "agenciafmd/admix-form": "v6.x-dev"
   },
   "require-dev": {
     "orchestra/testbench": "^4.0"
