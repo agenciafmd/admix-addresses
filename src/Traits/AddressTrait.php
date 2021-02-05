@@ -1,6 +1,8 @@
 <?php
 
-namespace Agenciafmd\Addresses;
+namespace Agenciafmd\Addresses\Traits;
+
+use Agenciafmd\Addresses\Models\Address;
 
 trait AddressTrait
 {

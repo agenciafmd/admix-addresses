@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            {{ Form::bsAddressText('CEP', $collection, 'zipcode', optional($model)->address($collection)->zipcode ?? '', ['class' => 'js-zipcode mask-zipcode', 'required' => true]) }}
+            {{ Form::bsAddressText('CEP', $collection, 'postcode', optional($model)->address($collection)->postcode ?? '', ['class' => 'js-zipcode mask-zipcode', 'required' => true]) }}
             {{ Form::bsAddressText('Endereço', $collection, 'street', optional($model)->address($collection)->street ?? '', ['class' => 'js-street', 'required' => true]) }}
             {{ Form::bsAddressText('Número', $collection, 'number', optional($model)->address($collection)->number ?? '', ['class' => 'js-number', 'required' => true]) }}
             {{ Form::bsAddressText('Complemento', $collection, 'complement', optional($model)->address($collection)->complement ?? '', ['class' => 'js-complement', 'required' => false]) }}

@@ -19,7 +19,7 @@ composer require agenciafmd/admix-addresses:dev-master
 Na model `Package.php` acrescente a `Trait` e o `$guarded`
 
 ```
-use Agenciafmd\Addresses\AddressTrait;
+use Agenciafmd\Addresses\Traits\AddressTrait;
 ...
 class Package extends Model implements AuditableContract
 ...
@@ -30,7 +30,7 @@ class Package extends Model implements AuditableContract
     ];
 ```
 
-### View
+### View (TODO: refatorar para o blade component)
 
 Na view que será implementada os endereços, adicione
 
@@ -61,17 +61,50 @@ public function rules()
 {
     return [
         ...
-        'address.*.full_street' => 'required|max:150',
-        'address.*.zipcode' => 'required|max:150',
-        'address.*.street' => 'required|max:150',
-        'address.*.number' => 'required|max:150',
-        'address.*.complement' => 'nullable|max:150',
-        'address.*.neighborhood' => 'required|max:150',
-        'address.*.city' => 'required|max:150',
-        'address.*.state' => 'required|max:150',
-        'address.*.state_initials' => 'required|max:150',
-        'address.*.latitude' => 'required|max:150',
-        'address.*.longitude' => 'required|max:150',
+            'address.*.full_street' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.postcode' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.street' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.number' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.complement' => [
+                'nullable',
+                'max:150',
+            ],
+            'address.*.neighborhood' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.city' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.state' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.state_initials' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.latitude' => [
+                'required',
+                'max:150',
+            ],
+            'address.*.longitude' => [
+                'required',
+                'max:150',
+            ],
         ...
     ];
 }
@@ -81,7 +114,7 @@ public function attributes()
     return [
         ...
         'address.*.full_street' => 'endereço completo',
-        'address.*.zipcode' => 'cep',
+        'address.*.postcode' => 'cep',
         'address.*.street' => 'endereço',
         'address.*.number' => 'número',
         'address.*.complement' => 'complemento',
@@ -96,12 +129,12 @@ public function attributes()
 }
 ```
 
-### Factories
+### Factories (TODO: refatorar o how to)
 ```
 ...
 $item->addAddress('default', [
     'full_street' => $faker->streetAddress,
-    'zipcode' => $faker->postcode,
+    'postcode' => $faker->postcode,
     'street' => $faker->streetName,
     'number' => $faker->buildingNumber,
     'neighborhood' => $faker->citySuffix,
@@ -121,7 +154,7 @@ Quando for necessário, chame os dados
 
 ```
 $model->address()->full_street
-$model->address()->zipcode
+$model->address()->postcode
 $model->address()->street
 $model->address()->number
 $model->address()->complement

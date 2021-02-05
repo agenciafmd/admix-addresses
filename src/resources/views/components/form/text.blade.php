@@ -15,7 +15,7 @@
 
     <div class="invalid-feedback">
         @if($errors->admix->has("address.{$collection}.{$name}"))
-            {{ ucfirst($errors->admix->first("address.{$collection}.{$name}")) }}
+            {{ Str::ucfirst($errors->admix->first("address.{$collection}.{$name}")) }}
         @else
             o campo {{ strtolower($label) }} é obrigatório
         @endif
@@ -23,7 +23,7 @@
 
     @if($helper)
         <small id="{{ $name }}Help" class="pl-0 mt-1 form-text col text-muted">
-            {{ str_limit($helper, 60, '') }}
+            {{ Str::limit($helper, 60, '') }}
         </small>
     @endif
 </div>

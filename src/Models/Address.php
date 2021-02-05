@@ -1,6 +1,6 @@
 <?php
 
-namespace Agenciafmd\Addresses;
+namespace Agenciafmd\Addresses\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Auditable;

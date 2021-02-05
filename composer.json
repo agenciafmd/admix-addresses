@@ -1,52 +1,35 @@
 {
-  "name": "agenciafmd/admix-addresses",
-  "description": "Endereços",
-  "version": "1.0.0",
-  "homepage": "https://github.com/agenciafmd/admix-addresses",
-  "keywords": [
-    "laravel",
-    "agenciafmd",
-    "php",
-    "endereço",
-    "mapa",
-    "brasil",
-    "coordenadas"
-  ],
-  "authors": [
-    {
-      "name": "Tarsisio Xavier",
-      "email": "tarsisio@fmd.ag",
-      "homepage": "https://fmd.ag/",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "agenciafmd/admix-form": "dev-master"
-  },
-  "require-dev": {
-    "orchestra/testbench": "^4.0"
-  },
-  "autoload": {
-    "classmap": [
-      "src/database/factories"
+    "name": "agenciafmd/admix-addresses",
+    "description": "Endereços - Agência F&MD",
+    "homepage": "https://github.com/agenciafmd/admix-addresses",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tarsisio Xavier",
+            "email": "tarsisio@fmd.ag",
+            "homepage": "https://fmd.ag/",
+            "role": "Developer"
+        }
     ],
-    "files": [
-      "src/Http/helpers.php"
-    ],
-    "psr-4": {
-      "Agenciafmd\\Addresses\\": "src/"
+    "require": {
+        "laravel/framework": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0"
+    },
+    "autoload": {
+        "files": [
+            "src/Http/helpers.php"
+        ],
+        "psr-4": {
+            "Agenciafmd\\Addresses\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Agenciafmd\\Addresses\\Providers\\AddressServiceProvider"
+            ]
+        }
     }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Agenciafmd\\Addresses\\Providers\\AddressServiceProvider"
-      ],
-      "aliases": {
-      }
-    }
-  },
-  "config": {
-    "sort-packages": true
-  }
 }
