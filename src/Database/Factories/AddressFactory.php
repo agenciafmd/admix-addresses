@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace Agenciafmd\Addresses\Database\Factories;
 
 use Agenciafmd\Addresses\Models\Address;
 use Faker\Generator;
